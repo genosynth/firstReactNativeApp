@@ -1,7 +1,11 @@
-import { Text, View, ScrollView, StyleSheet, Image } from 'react-native'
+import { Text, View, ScrollView, StyleSheet, Image, Button } from 'react-native'
 import React, { Component } from 'react'
 
-function DayTwo({navigation}) {
+function DayTwo({route}) {
+
+  let addPoints = route.params.addPoints
+  
+
   return (
     <ScrollView>                      
  
@@ -49,7 +53,13 @@ function DayTwo({navigation}) {
         </View>
 
         <View style={styles.container}>
-          <Text style={styles.subHeaders}>Excersise 4 - Dumbell Incline Row</Text>
+          <Text style={styles.subHeaders}>Excersise 4 - Lat Pull Downs</Text>
+          <Image
+          style={styles.photo}
+          source={{
+            uri: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Lat-Pulldown.gif',
+          }}
+          />
         </View>
 
 
@@ -96,6 +106,7 @@ function DayTwo({navigation}) {
         
     </View>
     
+    <Button onPress={()=>{addPoints()}} title='Complete'></Button>
 
 
   </ScrollView>

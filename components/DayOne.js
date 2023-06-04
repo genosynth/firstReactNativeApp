@@ -1,13 +1,20 @@
-import { StyleSheet, Text, View, ScrollView, Image } from 'react-native'
+import { StyleSheet, Text, View, ScrollView, Image , Button} from 'react-native'
 //import YoutubeIframe from 'react-native-youtube-iframe'
 import React, { Component } from 'react'
 
+
 // <YoutubeIframe height={300} play={false} videoId={'SrqOu55lrYU'}/>
 function DayOne({route}) {
+
+  let addPoints = route.params.addPoints
+  console.log(addPoints)
+ 
+
   return (
     <ScrollView>
 
     <View>
+
         <Text style={styles.headers}>Chest</Text>
         <View style={styles.container}>
           <Text style={styles.subHeaders}>Excersise 1 - Incline Bench Press</Text>
@@ -25,6 +32,7 @@ function DayOne({route}) {
           elbows bent and angled down below your ribs. Relax your neck against the bench. Keep your feet flat on the floor.
           Brace your core and press both dumbbells straight over your chest as you exhale.
           </Text>
+         
         </View>
        
         <View style={styles.container}>
@@ -42,6 +50,7 @@ function DayOne({route}) {
             Your palms should be facing forward. Slowly bend your elbows until they are at a 90 degree angle and your upper arms are parallel to the ground.
             Push the weights up by straightening your arms.
           </Text>
+          
         </View>
         
         <View style={styles.container}>
@@ -126,6 +135,7 @@ function DayOne({route}) {
         
     </View>
     
+    <Button color="gold" onPress={()=>{addPoints()}} title='Complete'></Button>
 
 
   </ScrollView>

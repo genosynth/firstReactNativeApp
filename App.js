@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { useState } from 'react';
-import { StyleSheet, Text, View, Image, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, Image, ScrollView, Alert } from 'react-native';
 import { Button } from 'react-native';
 import DayOne from './components/DayOne';
 import DayTwo from './components/DayTwo';
@@ -12,11 +12,20 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 const Stack = createNativeStackNavigator();
 
  function HomeScreen({navigation}) { 
+
+  const [points, setPoints] = useState(0)
+
+  const addPoints = () => {
+    setPoints(points+1)
+    return alert("Congratulations for completing this workout!")
+  }
+
+  
   return ( 
     <ScrollView >
       <View style={styles.container}> 
         <Text style={styles.text}> Strong Foundation Workout Plan </Text> 
-        
+        <Text style={styles.text}>Total Points - {points}</Text>
         <View style={styles.padder}>
         <Text style={styles.text}> Chest & Triceps</Text>     
         <Image
@@ -28,7 +37,9 @@ const Stack = createNativeStackNavigator();
         <Button 
           color="gold"
           title="Start" 
-          onPress={() => navigation.navigate('Chest & Triceps')} 
+          onPress={() => navigation.navigate('Chest & Triceps',{            
+            addPoints: ()=>{addPoints()}
+          })} 
         /> 
         </View>
       
@@ -42,7 +53,9 @@ const Stack = createNativeStackNavigator();
         />
         <Button 
           title="Start" 
-          onPress={() => navigation.navigate('Back & Biceps')} 
+          onPress={() => navigation.navigate('Back & Biceps',{
+            addPoints: ()=>{addPoints()}
+          })} 
         /> 
         </View>
 
@@ -57,7 +70,9 @@ const Stack = createNativeStackNavigator();
         <Button  
           color='red'     
           title="Start" 
-          onPress={() => navigation.navigate('Legs')} 
+          onPress={() => navigation.navigate('Legs',{
+            addPoints: ()=>{addPoints()}
+          })} 
         />
         </View>
 
@@ -72,7 +87,9 @@ const Stack = createNativeStackNavigator();
         <Button 
           color='green'
           title="Start" 
-          onPress={() => navigation.navigate('Shoulders & Abdominals')} 
+          onPress={() => navigation.navigate('Shoulders & Abdominals', {
+            addPoints: ()=>{addPoints()}
+          })} 
         /> 
         </View>
 
@@ -83,6 +100,7 @@ const Stack = createNativeStackNavigator();
 
 
 export default function App() { 
+
   return ( 
     <NavigationContainer> 
       <Stack.Navigator> 
