@@ -69,16 +69,32 @@ function DayFour({route}) {
             uri: 'https://fitnessprogramer.com/wp-content/uploads/2015/11/Crunch.gif',
           }}
           />
+          <Text>
+            Bend your knees and place your arms across your chest. Contract your abs and inhale.
+            Exhale and lift your upper body, keeping your head and neck relaxed. Inhale and return to the starting position.
+          </Text>
         </View>
         
         <View style={styles.container}>
-          <Text style={styles.subHeaders}>Excersise 2 - Cable Kneeling Crunch</Text>
+          <Text style={styles.subHeaders}>Excersise 2 - Cable Kneeling Crunch/Seated Crunch Machine</Text>
           <Image
           style={styles.photo}
           source={{
             uri: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Kneeling-Cable-Crunch.gif',
           }}
           />
+            <Image
+          style={styles.photo}
+          source={{
+            uri: 'https://fitnessprogramer.com/wp-content/uploads/2021/09/Seated-Crunch-Machine.gif',
+          }}
+          />
+          <Text>
+            Cable crunches, also known as kneeling cable crunches, are a weighted crunch variation that target your abdominal muscles. 
+            Perform cable crunch exercises by kneeling in front of a cable station with a pulley attachment. 
+            Grip the rope attachment with both hands and pull it down until it rests right above your head.
+            Else you can use the machine which basically does the same movement if available.
+          </Text>
         </View>
 
         <View style={styles.container}>
@@ -89,6 +105,11 @@ function DayFour({route}) {
             uri: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Bicycle-Crunch.gif',
           }}
           />
+          <Text>
+            Raise your knees to a 90-degree angle and alternate extending your legs as if pedaling a bike. 
+            Twist your body to touch your elbow to the opposite knee with each pedal motion. 
+            With proper form, bicycle crunches can increase core strength while adding a cardio element to your ab exercise routine.
+          </Text>
         </View>
 
         <View style={styles.container}>
@@ -99,6 +120,10 @@ function DayFour({route}) {
             uri: 'https://fitnessprogramer.com/wp-content/uploads/2022/07/Cross-Body-Mountain-Climber.gif',
           }}
           />
+          <Text>
+            Start in a high plank position, shoulders over wrists, core engaged so body forms a straight line from shoulders to hips to heels. 
+            Engage your glutes and thighs to keep your legs straight. Drive your right knee in toward your chest, then quickly step it back to plank position.
+          </Text>
         </View>
     </View>
     

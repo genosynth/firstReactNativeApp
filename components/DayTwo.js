@@ -50,6 +50,14 @@ function DayTwo({route}) {
             uri: 'https://fitnessprogramer.com/wp-content/uploads/2021/06/close-grip-cable-row.gif',
           }}
           />
+          <Text>
+            Set the appropriate weight on the weight stack and attach a close-grip bar or V-bar to the seated row machine.
+            Grasp the bar with a neutral grip (palms facing in).
+            Keeping your legs slightly bent and your back straight, pull the weight up slightly off the stack. 
+            You should be sitting straight upright with your shoulders back. This is the starting position.
+            Keeping your body in position, pull the handle into your stomach.
+            Pull your shoulder blades back, squeeze, pause, and then slowly lower the weight back to the starting position.
+          </Text>
         </View>
 
         <View style={styles.container}>
@@ -60,6 +68,10 @@ function DayTwo({route}) {
             uri: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Lat-Pulldown.gif',
           }}
           />
+          <Text>
+          While seated, you pull a hanging bar toward you to reach chin level, then release it back up with control for one repetition. 
+          Try to not use momentum when bringing the weight down so keep a light weight at first then work your way up. Also try to keep your back straight.
+          </Text>
         </View>
 
 
@@ -79,6 +91,11 @@ function DayTwo({route}) {
               uri: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Curl.gif',
             }}
           />
+          <Text>
+            Starting with your weakest arm (usually the left), curl the dumbbell up as far as possible. 
+            Squeeze the bicep at the top of the exercise, and then slowly lower the weight down without it touching your body or taking the tension off your bicep. 
+            Repeat for the other arm. That's one rep.
+          </Text>
         </View>
         
 
@@ -90,6 +107,12 @@ function DayTwo({route}) {
               uri: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Seated-Incline-Dumbbell-Curl.gif',
             }}
           />
+          <Text>
+            Perform incline dumbbell curls by sitting on an incline bench set to a 45- or 60-degree angle. 
+            Hold a pair of dumbbells at your side.
+            Squeeze your biceps and bend your elbows to lift the dumbbells to shoulder level, then lower them again. 
+            Repeat this movement for the desired number of reps
+          </Text>
         </View>
         
 
@@ -101,6 +124,11 @@ function DayTwo({route}) {
               uri: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Hammer-Curl.gif',
             }}
           />
+          <Text>
+            Hammer curls are biceps curls performed with your hands facing each other. 
+            They're beneficial to add mass to your arms and can help focus more attention on the short head of the biceps.
+            They may be easier to tolerate than the traditional biceps curl.
+          </Text>
  
         </View>
         
