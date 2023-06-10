@@ -1,8 +1,10 @@
 {
   "expo": {
-    "name": "firstReactNativeExpoApp",
-    "slug": "firstReactNativeExpoApp",
+    "name": "Fitness App",
+    "slug": "fitnessApp",
     "version": "1.0.0",
+    "privacy": "public",
+    "description": "A fitness application consisting of a workout to follow.",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",

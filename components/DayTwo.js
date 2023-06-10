@@ -13,7 +13,10 @@ function DayTwo({route}) {
     <View>
         <Text style={styles.headers}>Back</Text>
         <View style={styles.container}>
-          <Text style={styles.subHeaders}>Excersise 1 - Standing Dumbell Rows</Text>
+          <Text style={styles.title}>Exercise 1</Text>
+          <Text style={styles.info}>{'\u2023'} 2 Warmup Sets</Text>
+          <Text style={styles.info}>{'\u2023'} 3 Sets </Text>
+          <Text style={styles.subHeaders}>Standing Dumbell Rows</Text>
           <Image
           style={styles.photo}
           source={{
@@ -25,25 +28,44 @@ function DayTwo({route}) {
           Perform dumbbell upright rows by grabbing a pair of dumbbells with an overhand grip and lifting them vertically in front
            of you until they reach shoulder height.
           </Text>
-        </View>
 
-        <View style={styles.container}>
-          <Text style={styles.subHeaders}>Excersise 2 - Dumbell Bent Over Reverse Grip Rows</Text>
+          <Text style={styles.subHeaders}>T Bar Row (Machine Version)</Text>
           <Image
           style={styles.photo}
           source={{
-            uri: 'https://fitnessprogramer.com/wp-content/uploads/2021/10/Dumbbell-Bent-Over-Reverse-Row.gif',
+            uri: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Lever-T-bar-Row.gif',
           }}
           />
-          <Text>
-            Let the dumbbells slide down your thighs until they're just below knee height with the palms facing outwards infront of you. 
-            Execute by pulling the dumbbells up under your chest as far as possible. 
-            Pause, and then slowly lower the dumbbells back to the starting position.
-          </Text>
         </View>
 
         <View style={styles.container}>
-          <Text style={styles.subHeaders}>Excersise 3 - Seated Cable Row </Text>
+         <Text style={styles.title}>Exercise 2</Text>
+         <Text style={styles.info}>{'\u2023'} 3 Sets - last set being a Drop Set </Text>
+          <Text style={styles.subHeaders}>Seated Cable Rows (Wide Grip)</Text>
+          <Image
+          style={styles.photo}
+          source={{
+            uri: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Seated-Cable-Row.gif',
+          }}
+          />
+          <Text>
+            Grip a bar slightly wider than shoulder width and assume the starting position. 
+            Inhale and pull the handle towards your abdomen, while leaning back slightly.
+            Exhale and slowly return to the starting position by extending your arms and leaning forward.
+          </Text>
+          <Text style={styles.subHeaders}>Seated Rows (Machine Version)</Text>
+          <Image
+          style={styles.photo}
+          source={{
+            uri: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Seated-Row-Machine.gif',
+          }}
+          />
+        </View>
+
+        <View style={styles.container}>
+          <Text style={styles.title}>Exercise 3</Text>
+          <Text style={styles.info}>{'\u2023'} 3 Sets </Text>
+          <Text style={styles.subHeaders}>Seated Cable Row (Narrow Grip)</Text>
           <Image
           style={styles.photo}
           source={{
@@ -61,7 +83,9 @@ function DayTwo({route}) {
         </View>
 
         <View style={styles.container}>
-          <Text style={styles.subHeaders}>Excersise 4 - Lat Pull Downs</Text>
+          <Text style={styles.title}>Exercise 4</Text>
+          <Text style={styles.info}>{'\u2023'} 4 Sets </Text>
+          <Text style={styles.subHeaders}>Lat Pull Downs</Text>
           <Image
           style={styles.photo}
           source={{
@@ -72,6 +96,13 @@ function DayTwo({route}) {
           While seated, you pull a hanging bar toward you to reach chin level, then release it back up with control for one repetition. 
           Try to not use momentum when bringing the weight down so keep a light weight at first then work your way up. Also try to keep your back straight.
           </Text>
+          <Text style={styles.subHeaders}>Lever Front Pull Down (Machine Version)</Text>
+          <Image
+          style={styles.photo}
+          source={{
+            uri: 'https://fitnessprogramer.com/wp-content/uploads/2021/05/Front-Pulldown.gif',
+          }}
+          />
         </View>
 
 
@@ -84,7 +115,9 @@ function DayTwo({route}) {
         <Text style={styles.headers}>Biceps</Text>
 
         <View style={styles.container}>
-          <Text style={styles.subHeaders}>Excersise 1 - Standing Alternate Curls</Text>
+          <Text style={styles.title}>Exercise 1</Text>
+          <Text style={styles.info}>{'\u2023'} 3 Sets - last set being a Drop Set</Text>
+          <Text style={styles.subHeaders}>Standing Alternate Curls</Text>
           <Image
             style={styles.photo}
             source={{
@@ -100,7 +133,9 @@ function DayTwo({route}) {
         
 
         <View style={styles.container}>
-          <Text style={styles.subHeaders}>Excersise 2 - Seated Incline Dumbell Curls</Text>
+         <Text style={styles.title}>Exercise 2</Text>
+         <Text style={styles.info}>{'\u2023'} 3 Sets </Text>
+          <Text style={styles.subHeaders}>Seated Incline Dumbell Curls</Text>
           <Image
             style={styles.photo}
             source={{
@@ -113,11 +148,22 @@ function DayTwo({route}) {
             Squeeze your biceps and bend your elbows to lift the dumbbells to shoulder level, then lower them again. 
             Repeat this movement for the desired number of reps
           </Text>
+          <Text style={styles.subHeaders}>Close Grip Z-Bar Curl (Barbell Variation)</Text>
+          <Image
+          style={styles.photo}
+          source={{
+            uri: 'https://fitnessprogramer.com/wp-content/uploads/2021/06/Close-Grip-Z-Bar-Curl.gif',
+          }}
+          />
+
+          
         </View>
         
 
         <View style={styles.container}>
-         <Text style={styles.subHeaders}>Excersise 3 - Hammer Curls</Text>
+         <Text style={styles.title}>Exercise 3</Text>
+         <Text style={styles.info}>{'\u2023'} 2 Sets </Text>
+         <Text style={styles.subHeaders}>Hammer Curls</Text>
          <Image
             style={styles.photo}
             source={{
@@ -152,8 +198,15 @@ const styles = StyleSheet.create({
   },
 
   headers:{
-    fontSize:30, 
-    fontWeight:"bold"   
+    fontSize:50, 
+    fontWeight:"bold",
+    textAlign:'center'
+  },
+
+  title:{
+    fontSize:35, 
+    fontWeight:"bold"  
+
   },
 
   subHeaders:{
@@ -164,6 +217,10 @@ const styles = StyleSheet.create({
   photo: {
     width: 400,
     height: 400,
+  },
+
+  info:{
+    fontSize:20
   }
 });
 

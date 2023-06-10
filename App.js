@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { useState, useEffect } from 'react';
-import { StyleSheet, Text, View, Image, ScrollView, Alert } from 'react-native';
+import { StyleSheet, Text, View, Image, ScrollView } from 'react-native';
 import { Button } from 'react-native';
 import DayOne from './components/DayOne';
 import DayTwo from './components/DayTwo';
@@ -9,19 +9,32 @@ import DayFour from './components/DayFour';
 import { NavigationContainer } from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Profile from './components/Profile';
+import Instructions from './components/Instructions';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { LogBox } from 'react-native';
 
 const Stack = createNativeStackNavigator();
+
+LogBox.ignoreLogs([
+  'Non-serializable values were found in the navigation state',
+]);
 
  function HomeScreen({navigation}) { 
 
   const [points, setPoints] = useState(0)
+  const [dateStarted, setDateStarted] = useState(0)
 
+  
 
  
   const addPoints = () => {
     setPoints(points+1)
    // AsyncStorage.setItem('data', points)
+
+   if(dateStarted==0){
+    setDateStarted(Date.now())
+    setDateStartedToStorage(Date.now)
+   }
 
     const storeData = async (value) => {
       try {
@@ -48,9 +61,44 @@ const Stack = createNativeStackNavigator();
       // error reading value
     }
   }
-    
+  
+  
+  const setDateStartedToStorage = async (value) =>{
+    try {
+      const jsonValue = JSON.stringify(value)
+      await AsyncStorage.setItem('date-started', jsonValue)
+    } catch (e) {
+      // saving error
+    }
+
+  }
+
+ 
+
+    const getDateStartedFromStorage = async () =>{
+
+          try {
+        const jsonValue = await AsyncStorage.getItem('date-started')
+        if(!jsonValue) return
+        setDateStarted((jsonValue))
+        return jsonValue
+        //console.log((jsonValue))
+        
+       
+      } catch(e) {
+        // error reading value
+      }
+    }
+ 
+ 
+
+ 
   useEffect(()=>{
+    
     getData()
+    getDateStartedFromStorage()  
+    //console.log(dateStarted)
+    
 
    const deleteStorage = async (key)=> {
       try {
@@ -62,23 +110,35 @@ const Stack = createNativeStackNavigator();
       }
   }
 
-  //deleteStorage('data')
+  //deleteStorage('date-started')
   },[])
   
- //console.log(getData())
+ 
 
 
   return ( 
     <ScrollView >
       <View style={styles.container}> 
-        <Text style={styles.text}> Strong Foundation Workout Plan </Text> 
-        <Button color="black" title="Go To Profile"
-          onPress={()=>{ navigation.navigate("Profile",{
-            points:points
-          })
+        <Text style={styles.text}> Strong Foundation Workout Plan </Text>
 
-          }}
-        ></Button>
+        <View>
+          <Button color="black" title="Go To Profile"
+            onPress={()=>{ navigation.navigate("Profile",{
+              points:points,
+              dateStarted:dateStarted
+            })
+
+            }}
+          ></Button>
+          <View style={styles.buttonsSpace}></View>
+          <Button title="See Instructions"
+            onPress={()=>{ navigation.navigate("Instructions")
+
+            }}
+          ></Button>  
+        </View> 
+        
+
        
         <View style={styles.padder}>
         <Text style={styles.text}> Chest & Triceps</Text>     
@@ -121,7 +181,7 @@ const Stack = createNativeStackNavigator();
             uri: 'https://i.pinimg.com/564x/e2/6e/26/e26e260147fc9a958879306383c4f5be.jpg',
           }}
         />
-        <Button  
+        <Button style={styles.button}
           color='red'     
           title="Start" 
           onPress={() => navigation.navigate('Legs',{
@@ -161,6 +221,7 @@ export default function App() {
         
         <Stack.Screen name="Home Screen" component = {HomeScreen} /> 
         <Stack.Screen name="Profile" component={Profile}/>
+        <Stack.Screen name="Instructions" component={Instructions}/>
         <Stack.Screen name="Chest & Triceps" component = {DayOne} /> 
         <Stack.Screen name="Back & Biceps" component = {DayTwo} /> 
         <Stack.Screen name="Legs" component = {DayThree} /> 
@@ -198,6 +259,13 @@ const styles = StyleSheet.create({
     padding:30
   },
 
+  
+  buttonsSpace:{
+    height:10
 
+  },
+  button:{
+    
+  }
 
 });

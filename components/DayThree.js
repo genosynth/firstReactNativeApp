@@ -11,7 +11,10 @@ const DayThree = ({route}) => {
 
     <View> 
       <View style={styles.container}>
-        <Text style={styles.subHeaders}>Excersise 1 - Squats</Text>
+        <Text style={styles.title}>Exercise 1</Text>
+        <Text style={styles.info}>{'\u2023'} 2 Warmup Sets </Text>
+        <Text style={styles.info}>{'\u2023'} 4 Sets - Last set being a Drop Set</Text>
+        <Text style={styles.subHeaders}>Squats</Text>
         <Image
           style={styles.photo}
           source={{
@@ -23,10 +26,19 @@ const DayThree = ({route}) => {
         and then rises to an upright position. Note: A squat can be done while holding weights, with a barbell on the upper back, or without weights.
         Also knees shouldn't go much past your feet.
         </Text>
+        <Text style={styles.subHeaders}>Hack Squat (Machine Version)</Text>
+        <Image
+          style={styles.photo}
+          source={{
+            uri: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Sled-Hack-Squat.gif',
+          }}
+        />
       </View>       
        
       <View style={styles.container}>
-        <Text style={styles.subHeaders}>Excersise 2 - Lunges</Text>
+        <Text style={styles.title}>Exercise 2</Text>
+        <Text style={styles.info}>{'\u2023'} 3 Sets </Text>
+        <Text style={styles.subHeaders}>Lunges</Text>
         <Image
           style={styles.photo}
           source={{
@@ -42,11 +54,13 @@ const DayThree = ({route}) => {
       </View> 
       
       <View style={styles.container}>
-        <Text style={styles.subHeaders}>Excersise 3 - Leg Dumbell Curl</Text>
+       <Text style={styles.title}>Exercise 3</Text>
+       <Text style={styles.info}>{'\u2023'} 3 Sets </Text>
+        <Text style={styles.subHeaders}>Leg Curl</Text>
         <Image
           style={styles.photo}
           source={{
-            uri: 'https://fitnessprogramer.com/wp-content/uploads/2022/04/Lying-Dumbbell-Leg-Curl.gif',
+            uri: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Leg-Curl.gif',
           }}
         />
         <Text>
@@ -54,10 +68,19 @@ const DayThree = ({route}) => {
         It involves bending your knees and moving your heels toward your butt while the rest of your body stays still. 
         Typically, the exercise is done on a leg curl machine but can also be done with a dumbell.
         </Text>
+        <Text style={styles.subHeaders}>Leg Dumbell Curl (Dumbell Version)</Text>
+        <Image
+          style={styles.photo}
+          source={{
+            uri: 'https://fitnessprogramer.com/wp-content/uploads/2022/04/Lying-Dumbbell-Leg-Curl.gif',
+          }}
+        />
       </View>
        
       <View style={styles.container}>
-        <Text style={styles.subHeaders}>Excersise 4 - Leg Extensions</Text>
+        <Text style={styles.title}>Exercise 4</Text>
+        <Text style={styles.info}>{'\u2023'} 3 Sets </Text>
+        <Text style={styles.subHeaders}>Leg Extensions</Text>
         <Image
           style={styles.photo}
           source={{
@@ -72,7 +95,9 @@ const DayThree = ({route}) => {
       </View>
 
       <View style={styles.container}>
-        <Text style={styles.subHeaders}>Excersise 5 - Calf Raises</Text>
+        <Text style={styles.title}>Exercise 5</Text>
+        <Text style={styles.info}>{'\u2023'} 3 Sets </Text>
+        <Text style={styles.subHeaders}>Calf Raises</Text>
         <Image
           style={styles.photo}
           source={{
@@ -105,8 +130,15 @@ const styles = StyleSheet.create({
   },
 
   headers:{
-    fontSize:30, 
-    fontWeight:"bold"   
+    fontSize:50, 
+    fontWeight:"bold",
+    textAlign:'center'
+  },
+
+  title:{
+    fontSize:35, 
+    fontWeight:"bold"  
+
   },
 
   subHeaders:{
@@ -117,6 +149,10 @@ const styles = StyleSheet.create({
   photo: {
     width: 400,
     height: 400,
+  },
+
+  info:{
+    fontSize:20
   }
 });
 export default DayThree

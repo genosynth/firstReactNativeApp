@@ -17,7 +17,17 @@ function DayOne({route}) {
 
         <Text style={styles.headers}>Chest</Text>
         <View style={styles.container}>
-          <Text style={styles.subHeaders}>Excersise 1 - Incline Bench Press</Text>
+
+          <Text style={styles.title}>Exercise 1</Text>
+
+          <Text style={styles.info}>
+          {'\u2023'} 2 Warm Up Sets
+          </Text>
+          <Text style={styles.info}>
+          {'\u2023'} 3 Sets - last set being a Drop Set
+          </Text>
+
+          <Text style={styles.subHeaders}>Incline Bench Press</Text>
           
           <Image
           style={styles.photo}
@@ -26,17 +36,27 @@ function DayOne({route}) {
           }}
           />
          
-          <Text>
-          If you are using dumbells.
+          <Text>         
           Hold a dumbbell in each hand, with hands positioned at your shoulders, 
           elbows bent and angled down below your ribs. Relax your neck against the bench. Keep your feet flat on the floor.
           Brace your core and press both dumbbells straight over your chest as you exhale.
           </Text>
+
+          <Text style={styles.subHeaders}>Level Incline Chest Press Machine (Machine Version)</Text>
+          <Image
+          style={styles.photo}
+          source={{
+            uri: 'https://fitnessprogramer.com/wp-content/uploads/2021/06/Lever-Incline-Chest-Press.gif',
+          }}
+          />
          
         </View>
        
         <View style={styles.container}>
-          <Text style={styles.subHeaders}>Excersise 2 - Flat Bench Press</Text>
+
+          <Text style={styles.title}>Exercise 2</Text>
+          <Text style={styles.info}>{'\u2023'} 3 Sets - last set being a Drop Set</Text>
+          <Text style={styles.subHeaders}>Flat Bench Press</Text>
           <Image
           style={styles.photo}
           source={{
@@ -44,17 +64,29 @@ function DayOne({route}) {
           }}
           />
           
-          <Text>
-            If using dumbells,
-            start by holding the dumbbells slightly wider than shoulder width apart above your shoulders. 
+          <Text>            
+            Start by placing your hand grip slightly wider than shoulder width apart above your shoulders. 
             Your palms should be facing forward. Slowly bend your elbows until they are at a 90 degree angle and your upper arms are parallel to the ground.
             Push the weights up by straightening your arms.
           </Text>
+
+          
+          <Text style={styles.subHeaders}>Lying Chest Press Machine (Machine Version)</Text>
+          <Image
+          style={styles.photo}
+          source={{
+            uri: 'https://fitnessprogramer.com/wp-content/uploads/2021/08/Lying-Chest-Press-Machine.gif',
+          }}
+          />
+          
           
         </View>
         
         <View style={styles.container}>
-          <Text style={styles.subHeaders}> Excersise 3 - Incline Chest Flies</Text>
+         <Text style={styles.title}>Exercise 3</Text>
+         <Text style={styles.info}>{'\u2023'} 3 Sets </Text>
+          <Text style={styles.subHeaders}>Incline Chest Flies</Text>
+          
           <Image
           style={styles.photo}
           source={{
@@ -67,10 +99,21 @@ function DayOne({route}) {
           The dumbbells will be facing one another and held together. 
           With a slight bend in the elbow, open up your chest and slowly lower the dumbbells to the sides.
           </Text>
+
+          <Text style={styles.subHeaders}>Low Cable Cross Over (Cable Machine Version)</Text>
+          <Image
+          style={styles.photo}
+          source={{
+            uri: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Low-Cable-Crossover.gif',
+          }}
+          />
+
         </View>
         
         <View style={styles.container}>
-          <Text style={styles.subHeaders}>Excersise 4 - Flat Chest Flies</Text>
+          <Text style={styles.title}>Exercise 4</Text>
+          <Text style={styles.info}>{'\u2023'} 3 Sets </Text>
+          <Text style={styles.subHeaders}>Flat Chest Flies</Text>
           <Image
           style={styles.photo}
           source={{
@@ -83,29 +126,25 @@ function DayOne({route}) {
             With a slight bend in the elbow, open up your chest and slowly lower the dumbells to the sides.
             When the dumbells are parallel with the gorund, pause, and return to the starting position.
           </Text>
-        </View>
-        
-        <View style={styles.container}>
-          <Text style={styles.subHeaders}>Excersise 5 - Push Ups</Text>
+
+          <Text style={styles.subHeaders}>Inner Chest Machine Press (Machine Version)</Text>
           <Image
           style={styles.photo}
           source={{
-            uri: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Push-Up.gif',
+            uri: 'https://fitnessprogramer.com/wp-content/uploads/2021/06/Inner-Chest-Press-Machine.gif',
           }}
           />
-          <Text>
-            Push-ups are an exercise in which a person, keeping a prone position,
-             with the hands palms down under the shoulders, the balls of the feet on the ground, 
-             and the back straight, pushes the body up and lets it down by an alternate straightening and bending of the arms.
-          </Text>
-        </View>
+        </View>        
+     
 
     </View>
 
     <View>
         <Text style={styles.headers} >Triceps</Text>
         <View style={styles.container}>
-          <Text style={styles.subHeaders}>Excersise 1 - Tricep Pushdown</Text>
+          <Text style={styles.title}>Exercise 1</Text>
+          <Text style={styles.info}>{'\u2023'} 3 Sets </Text>
+          <Text style={styles.subHeaders}>Tricep Pushdown</Text>
           <Image
           style={styles.photo}
           source={{
@@ -117,10 +156,20 @@ function DayOne({route}) {
             Keeping your elbows tucked in at your sides grab the handle, 
             tense your core, and bring your hands down until your arms are fully extended, then return to the starting position. Only your forearms should move.
           </Text>
+
+          <Text style={styles.subHeaders}>Lever Tricep Extension (Machine Version)</Text>
+          <Image
+          style={styles.photo}
+          source={{
+            uri: 'https://fitnessprogramer.com/wp-content/uploads/2021/04/Lever-Tricep-Extension.gif',
+          }}
+          />
         </View>
        
         <View style={styles.container}>
-          <Text style={styles.subHeaders}>Excersise 2 - Reverse Grip Pushdown</Text>
+          <Text style={styles.title}>Exercise 2</Text>
+          <Text style={styles.info}>{'\u2023'} 3 Sets - last set being a Drop Set</Text>
+          <Text style={styles.subHeaders}>Reverse Grip Pushdown</Text>
           <Image
           style={styles.photo}
           source={{
@@ -130,6 +179,7 @@ function DayOne({route}) {
            <Text>
              A pushdown is a tricep exercise where you extend your arms downward while standing upright. 
              And a reverse grip tricep pushdown is simply a variation where you hold your palms up.
+             Always remember to keep your inner arms close to your body when doing this exercise.
           </Text>
         </View>
         
@@ -153,8 +203,15 @@ const styles = StyleSheet.create({
   },
 
   headers:{
-    fontSize:30, 
-    fontWeight:"bold"   
+    fontSize:50, 
+    fontWeight:"bold",
+    textAlign:'center'
+  },
+
+  title:{
+    fontSize:35, 
+    fontWeight:"bold"  
+
   },
 
   subHeaders:{
@@ -165,7 +222,18 @@ const styles = StyleSheet.create({
   photo: {
     width: 400,
     height: 400,
+  },
+
+  twoPhotos:{
+    width: 400,
+    height: 400,
+
+  },
+
+  info:{
+    fontSize:20
   }
+
 });
 
 
